@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3eaki6ih28pp" path="res://player_ship/ship.tscn" id="1_arnqv"]
 [ext_resource type="PackedScene" uid="uid://wnee04k82mhs" path="res://effects/parallax_background.tscn" id="2_tpsc7"]
-[ext_resource type="PackedScene" uid="uid://b02ahfpq8xmi3" path="res://enemies/green_enemy.tscn" id="3_sdw3u"]
+[ext_resource type="PackedScene" uid="uid://6ak0cuymi4yx" path="res://enemies/enemy_generator.tscn" id="4_y2sp1"]
 
 [node name="World" type="Node2D"]
 
@@ -11,11 +11,4 @@ position = Vector2(80, 216)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_tpsc7")]
 
-[node name="GreenEnemy" parent="." instance=ExtResource("3_sdw3u")]
-position = Vector2(24, 8)
-
-[node name="GreenEnemy2" parent="." instance=ExtResource("3_sdw3u")]
-position = Vector2(88, 16)
-
-[node name="GreenEnemy3" parent="." instance=ExtResource("3_sdw3u")]
-position = Vector2(72, 64)
+[node name="EnemyGenerator" parent="." instance=ExtResource("4_y2sp1")]
