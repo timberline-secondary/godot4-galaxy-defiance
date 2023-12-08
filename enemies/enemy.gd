@@ -7,6 +7,7 @@ extends Node2D
 @onready var shake_component = $ShakeComponent as ShakeComponent
 @onready var hurtbox_component = $HurtboxComponent as HurtboxComponent
 @onready var hitbox_component = $HitboxComponent as HitboxComponent
+@onready var destroyed_component = $DestroyedComponent as DestroyedComponent
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,7 @@ func _ready():
 		shake_component.tween_shake()
 	)
 	stats_component.no_health.connect(queue_free)
+	hitbox_component.hit_hurtbox.connect(destroyed_component.destroy.unbind(1))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
