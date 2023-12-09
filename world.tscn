@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddu0xr4ax7wrx"]
+[gd_scene load_steps=5 format=3 uid="uid://ddu0xr4ax7wrx"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_1pbec"]
 [ext_resource type="PackedScene" uid="uid://d3eaki6ih28pp" path="res://player_ship/ship.tscn" id="1_arnqv"]
 [ext_resource type="PackedScene" uid="uid://wnee04k82mhs" path="res://effects/parallax_background.tscn" id="2_tpsc7"]
 [ext_resource type="PackedScene" uid="uid://6ak0cuymi4yx" path="res://enemies/enemy_generator.tscn" id="4_y2sp1"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_1pbec")
 
 [node name="Ship" parent="." instance=ExtResource("1_arnqv")]
 position = Vector2(80, 216)
