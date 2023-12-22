@@ -12,6 +12,7 @@ extends Node2D
 @onready var score_component = $ScoreComponent as ScoreComponent
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	stats_component.no_health.connect(func():
