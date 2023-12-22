@@ -28,4 +28,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PinkEnemy" parent="." instance=ExtResource("7_8dntw")]
-position = Vector2(80, 48)
+position = Vector2(16, 48)

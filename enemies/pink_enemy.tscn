@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dauogi7w7nv63"]
+[gd_scene load_steps=18 format=3 uid="uid://dauogi7w7nv63"]
 
 [ext_resource type="PackedScene" uid="uid://17jiwh6m5kdo" path="res://enemies/enemy.tscn" id="1_dm1ul"]
 [ext_resource type="Script" path="res://enemies/pink_enemy.gd" id="2_cglk6"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" path="res://components/timed_state_componoent.gd" id="3_4mw84"]
 [ext_resource type="Script" path="res://components/move_component.gd" id="4_1na5s"]
 [ext_resource type="Script" path="res://components/border_bounce_component.gd" id="5_lh7w1"]
+[ext_resource type="Script" path="res://components/state_component.gd" id="7_fjnw7"]
+[ext_resource type="Script" path="res://components/spawner_component.gd" id="8_aul3a"]
+[ext_resource type="PackedScene" uid="uid://bw4ihoshwouh1" path="res://projectiles/pink_enemy_projectile.tscn" id="9_8106b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76vrj"]
 atlas = ExtResource("2_k2lal")
@@ -109,7 +112,16 @@ script = ExtResource("5_lh7w1")
 actor = NodePath("../../..")
 move_component = NodePath("../MoveSideComponent")
 
-[node name="PauseState" type="Node" parent="States" index="2"]
+[node name="FireState" type="Node" parent="States" index="2"]
+unique_name_in_owner = true
+script = ExtResource("7_fjnw7")
+
+[node name="ProjectileSpawnerComponent" type="Node2D" parent="States/FireState" index="0"]
+unique_name_in_owner = true
+script = ExtResource("8_aul3a")
+scene = ExtResource("9_8106b")
+
+[node name="PauseState" type="Node" parent="States" index="3"]
 unique_name_in_owner = true
 script = ExtResource("3_4mw84")
 duration = 3.0
