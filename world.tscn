@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddu0xr4ax7wrx"]
+[gd_scene load_steps=7 format=3 uid="uid://ddu0xr4ax7wrx"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_1pbec"]
 [ext_resource type="PackedScene" uid="uid://d3eaki6ih28pp" path="res://player_ship/ship.tscn" id="1_arnqv"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://wnee04k82mhs" path="res://effects/parallax_background.tscn" id="2_tpsc7"]
 [ext_resource type="PackedScene" uid="uid://6ak0cuymi4yx" path="res://enemies/enemy_generator.tscn" id="4_y2sp1"]
 [ext_resource type="LabelSettings" uid="uid://buaw34u6c8eu7" path="res://fonts/default_label_settings.tres" id="6_saae3"]
-[ext_resource type="PackedScene" uid="uid://dauogi7w7nv63" path="res://enemies/pink_enemy.tscn" id="7_8dntw"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_1pbec")
@@ -26,6 +25,3 @@ text = "Score"
 label_settings = ExtResource("6_saae3")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="PinkEnemy" parent="." instance=ExtResource("7_8dntw")]
-position = Vector2(16, 48)
