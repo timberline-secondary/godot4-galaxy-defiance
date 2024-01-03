@@ -5,6 +5,8 @@ class_name OnetimeAnimatedEffect
 # and so we can connect to the animation_finished signal to free it
 extends AnimatedSprite2D
 
+@onready var variable_pitch_audio_stream_player = $VariablePitchAudioStreamPlayer
+
 func _ready() -> void:
 	# Free this node when the animation is finished
 	animation_finished.connect(queue_free)

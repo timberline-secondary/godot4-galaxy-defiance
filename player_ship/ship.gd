@@ -8,11 +8,13 @@ extends Node2D
 @onready var move_component = $MoveComponent as MoveComponent
 @onready var animated_sprite_2d = $Anchor/AnimatedSprite2D
 @onready var flame_animated_sprite = $Anchor/FlameAnimatedSprite
+@onready var variable_pitch_audio_stream_player = $VariablePitchAudioStreamPlayer as VariablePitchAudioStreamPlayer
 
 func _ready():
 	fire_rate_timer.timeout.connect(fire_lasers)
 
 func fire_lasers() -> void:
+	variable_pitch_audio_stream_player.play_with_variance()
 	spawner_component.spawn(left_muzzle.global_position)
 	spawner_component.spawn(right_muzzle.global_position)
 	scale_component.tween_scale()
